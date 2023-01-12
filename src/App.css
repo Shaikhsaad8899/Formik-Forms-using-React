@@ -11,9 +11,8 @@ form {
   width: max-content;
   height: max-content;
   text-align: left;
-  
 }
-button{
+button {
   background-color: black;
   color: white;
   padding: 10px 20px;
@@ -36,4 +35,11 @@ input[type="email"] {
   background-image: none;
   border: 1px solid #ccc;
   margin-bottom: 20px;
+}
+.form-control {
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
 }
