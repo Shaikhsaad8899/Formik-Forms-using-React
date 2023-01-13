@@ -24,7 +24,9 @@ label {
   justify-content: left;
 }
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input,
+textarea,select {
   display: block;
   width: 400px;
   padding: 6px 12px;
@@ -41,5 +43,9 @@ input[type="email"] {
 }
 
 .error {
+  color: red;
+}
+
+.form-error {
   color: red;
 }
