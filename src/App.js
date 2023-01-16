@@ -7,8 +7,8 @@ import Registration from "./components/Registration";
 function App() {
   return (
     <div className="App">
-      {/* <YoutubeForm /> */}
-      {/* <AddUser /> */}
+      <YoutubeForm />
+      <AddUser />
       {/* <Registration /> */}
       {/* <OldYoutubeForm /> */}
     </div>
