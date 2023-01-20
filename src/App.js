@@ -1,12 +1,12 @@
 // import logo from "./logo.svg";
 import "./App.css";
+import React from "react";
 import { YoutubeForm } from "./components/YoutubeForm";
 import { OldYoutubeForm } from "./components/oldYoutubeForm";
 import { AddUser } from "./components/AddUser";
 import Registration from "./components/Registration";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./Routing/Home";
-import { About } from "./Routing/About";
 import { Navbar } from "./Routing/Navbar";
 import { Navigate } from "./Routing/Navigate";
 import { NoMatch } from "./Routing/NoMatch";
@@ -16,7 +16,7 @@ import { Newproducts } from "./Routing/Newproducts";
 import { Users } from "./Routing/Users/Users";
 import { UserDetails } from "./Routing/Users/UserDetails";
 import { Admin } from "./Routing/Users/Admin";
-
+const LazyAbout = React.lazy(() => import("./Routing/About"));
 function App() {
   return (
     <>
@@ -24,7 +24,14 @@ function App() {
       <div className="App2">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route
+            path="/about"
+            element={
+              <React.Suspense fallback="Loading...">
+                <LazyAbout />
+              </React.Suspense>
+            }
+          />
           <Route path="order-summary" element={<Navigate />} />
           <Route path="products" element={<Products />}>
             <Route index="featured" element={<Featured />} />
