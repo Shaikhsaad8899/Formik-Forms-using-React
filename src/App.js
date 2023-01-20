@@ -10,15 +10,30 @@ import { About } from "./Routing/About";
 import { Navbar } from "./Routing/Navbar";
 import { Navigate } from "./Routing/Navigate";
 import { NoMatch } from "./Routing/NoMatch";
+import { Products } from "./Routing/Products";
+import { Featured } from "./Routing/Featured";
+import { Newproducts } from "./Routing/Newproducts";
+import { Users } from "./Routing/Users/Users";
+import { UserDetails } from "./Routing/Users/UserDetails";
+
 function App() {
   return (
     <>
       <Navbar />
-      <div className="App">
+      <div className="App2">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="order-summary" element={<Navigate />} />
+          <Route path="products" element={<Products />}>
+            <Route index="featured" element={<Featured />} />
+            <Route path="featured" element={<Featured />} />
+            <Route path="new" element={<Newproducts />} />
+          </Route>
+          <Route path="users" element={<Users />} />
+          <Route path="users/:userId" element={<UserDetails />} />
+          {/* <Route path="user/2" element={<User2 />} />
+          <Route path="user/3" element={<User3 />} /> */}
           <Route path="*" element={<NoMatch />} />
         </Routes>
 

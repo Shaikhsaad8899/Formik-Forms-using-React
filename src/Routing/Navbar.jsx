@@ -11,13 +11,19 @@ export const Navbar = () => {
     <>
       <nav>
         <NavLink style={navLinkStyles} to="/">
-          Home
+          <p>Home</p>{" "}
         </NavLink>
         <NavLink style={navLinkStyles} to="/about">
-          About
+          <p>About</p>{" "}
         </NavLink>
         <NavLink style={navLinkStyles} to="order-summary">
-          Order
+          <p>Order</p>{" "}
+        </NavLink>
+        <NavLink style={navLinkStyles} to="products">
+          <p>products</p>{" "}
+        </NavLink>
+        <NavLink style={navLinkStyles} to="users">
+          <p>Users</p>{" "}
         </NavLink>
       </nav>
     </>
