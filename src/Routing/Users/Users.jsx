@@ -22,11 +22,11 @@ export const Users = () => {
           Reset Filter
         </button>
       </div>
-      {showActiveUsers ? (
+      {/* {showActiveUsers ? (
         <h2>Showing Active Users</h2>
       ) : (
         <h2>Showing all users</h2>
-      )}
+      )} */}
     </>
   );
 };
